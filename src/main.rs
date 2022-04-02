@@ -11,7 +11,7 @@ async fn main() {
     //   .map(warp::reply)
     //   .with(cors);
     let hello = warp::path!("api" / "hello")
-      .map(|| format!("hi there!"));
+      .map(|| format!("greeting from backend server"));
 
     warp::serve(hello)
       .run(([127, 0, 0, 1], 3030))
